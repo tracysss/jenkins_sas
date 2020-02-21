@@ -1,2 +1,2 @@
 # jenkinstest
-Test using Jenkins
+CI/CD SAS programs using Jenkins
