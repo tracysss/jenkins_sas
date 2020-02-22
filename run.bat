@@ -1,1 +1,1 @@
-python C:\Users\trsong\Documents\SGF2020\git_repo\SasPy.py
+C:\Users\trsong\AppData\Local\Continuum\anaconda3\python.exe C:\Users\trsong\Documents\SGF2020\git_repo\SasPy.py
