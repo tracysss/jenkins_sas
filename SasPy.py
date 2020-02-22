@@ -1,6 +1,7 @@
 import saspy
 import pandas as pd
 import unittest
+import xmlrunner
 sas=saspy.SASsession(cfgname='winlocal')
 
 f = open('C:/Users/trsong/Documents/SGF2020/P0.sas','r')
@@ -36,8 +37,14 @@ class TestSAS_dataset(unittest.TestCase):
             self.assertEqual(total_list[i], self.value1[i] + self.value2[i])
 
 # run unit test
-if __name__ == '__main__':
-    unittest.main()
+if __name__=='__main__':
+    test_suite = unittest.TestSuite()
+    test_suite.addTest(unittest.makeSuite(TestSAS_dataset))
+    runner = xmlrunner.XMLTestRunner(output='report')
+    runner.run(test_suite)
+
+#if __name__ == '__main__':
+#    unittest.main()
 
 #saspy.SAScfg
 
