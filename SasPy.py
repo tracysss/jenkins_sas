@@ -2,15 +2,15 @@ import saspy
 import pandas as pd
 import unittest
 import xmlrunner
-sas=saspy.SASsession(cfgname='winlocal')
+#sas=saspy.SASsession(cfgname='winlocal')
 
-f = open('C:/Users/trsong/Documents/SGF2020/P0.sas','r')
-f_text = f.read()
-f_text = f_text.replace('\\','/')
+#f = open('C:/Users/trsong/Documents/SGF2020/P0.sas','r')
+#f_text = f.read()
+#f_text = f_text.replace('\\','/')
 
-# run SAS program
-ps = sas.submit(f_text)
-print(ps['LOG'])
+## run SAS program
+#ps = sas.submit(f_text)
+#print(ps['LOG'])
 
 # convert SAS dataset to pandas dataframe
 df = pd.read_sas(r'C:\Users\trsong\Documents\SGF2020\Programs\output\output.sas7bdat') 
