@@ -50,6 +50,7 @@ if __name__=='__main__':
     runner = xmlrunner.XMLTestRunner(output='report')
     runner.run(test_suite)
 
+print("######## End of Python ############")
 #if __name__ == '__main__':
 #    unittest.main()
 
