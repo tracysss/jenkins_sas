@@ -5,6 +5,7 @@ import os
 sys.path.append(os.environ['WORKSPACE'])
 print("sys.path=")
 print(sys.path)
+import numpy
 import pandas as pd
 import unittest
 import xmlrunner
