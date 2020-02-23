@@ -47,7 +47,7 @@ class TestSAS_dataset(unittest.TestCase):
 if __name__=='__main__':
     test_suite = unittest.TestSuite()
     test_suite.addTest(unittest.makeSuite(TestSAS_dataset))
-    runner = xmlrunner.XMLTestRunner(output=r'C:\Users\trsong\Documents\SGF2020\report')
+    runner = xmlrunner.XMLTestRunner(output=r'C:\Program Files (x86)\Jenkins\workspace\SAS project test\reports')
     runner.run(test_suite)
 
 print("######## End of Python ############")
