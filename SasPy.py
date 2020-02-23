@@ -2,9 +2,9 @@
 import sys
 import os
 # jenkins exposes the workspace directory through env.
-sys.path.append(os.environ['WORKSPACE'])
-print("sys.path=")
-print(sys.path)
+#sys.path.append(os.environ['WORKSPACE'])
+#print("sys.path=")
+#print(sys.path)
 import numpy
 import pandas as pd
 import unittest
