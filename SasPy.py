@@ -1,23 +1,6 @@
-#import saspy
-import sys
-import os
-# jenkins exposes the workspace directory through env.
-#sys.path.append(os.environ['WORKSPACE'])
-#print("sys.path=")
-#print(sys.path)
-import numpy
 import pandas as pd
 import unittest
 import xmlrunner
-#sas=saspy.SASsession(cfgname='winlocal')
-print(sys.path)
-#f = open('C:/Users/trsong/Documents/SGF2020/P0.sas','r')
-#f_text = f.read()
-#f_text = f_text.replace('\\','/')
-
-## run SAS program
-#ps = sas.submit(f_text)
-#print(ps['LOG'])
 
 # convert SAS dataset to pandas dataframe
 df = pd.read_sas(r'C:\Users\trsong\Documents\SGF2020\Programs\output\output.sas7bdat') 
@@ -33,11 +16,15 @@ class TestSAS_dataset(unittest.TestCase):
         self.value2 = [110, 150, 80]
 
     # test if values are populated
-    def test_value(self):
+    def test_value1(self):
         for i in range(len(self.value1)):
             self.assertEqual(value1_list[i], self.value1[i]) 
-            self.assertEqual(value2_list[i], self.value2[i])  
-            
+
+    # test if values are populated
+    def test_value2(self):
+        for i in range(len(self.value1)):
+            self.assertEqual(value2_list[i], self.value2[i]) 
+
     # test column total
     def test_total(self):
         for i in range(len(self.value1)):
@@ -51,29 +38,3 @@ if __name__=='__main__':
     runner.run(test_suite)
 
 print("######## End of Python ############")
-#if __name__ == '__main__':
-#    unittest.main()
-
-#saspy.SAScfg
-
-#print("########### SAS text ##############")
-#print(f_text)
-
-## import csv file
-#ds = sas.read_csv("C:/Users/trsong/Documents/SGF2020/input.csv")
-#ps = sas.submit("""
-#libname  outlib 'C:\\Users\\trsong\\Documents\\SGF2020';
-#data outlib.output;
-#	informat date $10. number 8. value1 8. value2 8.;
-#	INPUT date number value1 value2;
-#	total = value1 + value2;
-#	datalines;
-#01/01/2020   1    100      	110
-#01/02/2020   2    100    	150
-#01/03/2020	 3    120        80
-#;
-
-#run;
-
-#""")
-#print(ps['LOG'])
