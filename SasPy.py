@@ -7,7 +7,7 @@ import pandas as pd
 import unittest
 import xmlrunner
 #sas=saspy.SASsession(cfgname='winlocal')
-
+print(sys.path)
 #f = open('C:/Users/trsong/Documents/SGF2020/P0.sas','r')
 #f_text = f.read()
 #f_text = f_text.replace('\\','/')
